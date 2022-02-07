@@ -1,0 +1,719 @@
+@font-face{
+    font-family: "Bold";
+    src: url(fonts/Bold.ttf);
+}
+@font-face{
+    font-family: "Regular";
+    src: url(fonts/Regular.ttf);
+}
+
+:root{
+    --black:#161722;
+    --white:#FFFFFF;
+    --primary:#FFD2A4;
+    --light-orange:#FFF5EB;
+    --grey:#F5F2F0;
+}
+h1,h2,h3,h4,h5,h5{
+    text-transform: uppercase;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+main-site-wrapper{
+    -webkit-font-smoothing: antialised;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+}
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+    }
+}
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }
+}
+@media (min-width:1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
+                                /* Utility Clases */
+
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex:1;
+}
+
+.align-center{
+    align-items: center;
+}
+.grid{
+    display: grid;
+}
+
+.justify-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.btn{
+    padding: 1.10rem 3rem;
+    border-radius: 8px;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-family: "Regular";
+    font-weight: 800;
+    border: 1px solid transparent;
+    text-transform: uppercase;
+}
+.btn-primary{
+    background: var(--primary);
+    color: var(--black);
+}
+.btn-primary:hover{
+    border: 1px solid red;
+}
+.btn-secondary{
+    background: var(--black);
+    font-size: 1rem;
+    font-family: "Regular";
+    font-weight: normal;
+    color: var(--primary);
+}
+
+.section-heading{
+    color: var(--black);
+    text-align:center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 0.6;
+    text-transform: uppercase;
+    font-family: "Regular";
+}
+.section-heading + h1{
+    color: var(--black);
+    font-size: 4rem;
+    text-align:center;
+    font-family: "Bold";
+    margin-bottom: 4rem;
+    text-transform: uppercase
+}
+
+
+                                /* Utility Clases */
+
+header.topbar{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.75rem 0;
+    
+}
+.hamberger{
+    position: absolute;
+    z-index: 11;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+.hamberger img{
+    width: 30px;
+}
+
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    background: var(--black);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+}
+.open{
+    transform: translateX(0);
+}
+.mobile-nav ul{
+    list-style-type: none;
+}
+.mobile-nav ul li{
+    padding: 1rem;
+}
+.mobile-nav ul li a{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+
+
+.times{
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.times img{
+    width: 30px;
+}
+
+
+
+
+.topbar .container .left{
+    width: 100%;
+}
+.topbar .container .left .logo{
+    color: var(--white);
+    font-family: "Bold";
+    font-weight: 700;
+    letter-spacing: 0.055rem;
+    margin-right: 7rem;
+}
+.topbar .container .left .links a{
+    color: var(--white);
+    font-size: 1rem;
+    font-family: "Regular";
+    margin-right: 3rem;
+}
+.topbar .container .right{
+    width: 100%;
+}
+
+.topbar .container .right button{
+    margin-left: 24rem;
+}
+
+header.hero{
+    background-image: url(Images/pexels-arina-krasnikova-5418305.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 735px;
+    background-size: cover;
+    background-position: 0% 0%;
+    overflow: hidden;
+}
+
+header.hero .container{
+    color: var(--white);
+    padding-top: 8rem;
+}
+
+header.hero .container h6{
+    font-size: 1rem;
+    font-family: "Bold";
+    margin-bottom: 1rem;
+}
+
+header.hero .container h1{
+    font-size: 4rem;
+    width: 50%;
+    font-family: "Bold";
+    margin-bottom: 1.2rem;
+}
+
+header.hero .container button{
+    margin-bottom: 3rem;
+}
+
+header.hero .container p{
+    font-family: "Regular";
+    width: 50%;
+}
+
+section.what-do{
+    padding: 4rem 0;
+}
+
+section.what-do .card-wrapper{
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+}
+section.what-do .card-wrapper .card{
+    background: var(--light-orange);
+    padding: 4rem 3rem;
+    width: 100%;
+    height: ;
+}
+section.what-do .card-wrapper .card img{
+    background: var(--primary);
+    border-radius: 50%;
+    padding: 0.48rem 0.48rem;
+    margin-bottom: 1rem;
+}
+
+section.what-do .card-wrapper .card h4{
+    margin-bottom: 1rem;
+    font-family: "Regular";
+    font-weight: 800;
+}
+section.welcome{
+    text-align: center;
+}
+section.welcome p{
+    padding: 0 9rem;
+    margin-bottom: 3rem;
+}
+section.welcome h1{
+    margin-bottom: 3rem;
+}
+section.welcome .welcome-center{
+    padding: 0 2rem;
+    padding-top: 2rem
+}
+section.welcome .section-heading-2 {
+    margin-top: 4rem;
+}
+section.welcome .section-heading-2 + h1{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+section.welcome .welcome-bottom p{
+    padding: 0 5rem;
+}
+
+section.benefit-of-church{
+    background: var(--grey);
+    padding: 4rem 0;
+}
+section.benefit-of-church .section-heading +h1{
+    padding: 0 5rem;
+}
+
+section.benefit-of-church .card-wrapper{
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap:1rem;
+    padding-bottom: 2rem;
+}
+section.benefit-of-church .card-wrapper .card{
+    position: relative;
+}
+section.benefit-of-church .card-wrapper img{
+    width: 100%;
+    
+}
+section.benefit-of-church .card-wrapper .card h5{
+    font-size: 1rem;
+    /* text-align: center; */
+    font-family: "Bold";
+    padding: 1rem 1rem;
+}
+section.benefit-of-church .card-wrapper .card div{
+    position: absolute;
+    bottom: 1rem;
+    color: var(--white);
+}
+
+section.benefit-of-church .card-wrapper .card:first-child div{
+    position: absolute;
+    bottom: 3rem;
+    color: var(--white);
+    padding: 0 1rem;
+}
+
+section.upcoming{
+    padding-top: 6rem;
+}
+
+section.upcoming .left{
+    flex: 1;
+    background: var(--light-orange);
+    padding: 4rem 4rem;
+}
+section.upcoming  .left .upcoming-card-top h6{
+    background: linear-gradient(rgba(165, 78, 43, 1),rgba(220, 152, 83, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Regular";
+    font-size: .75rem;
+    margin-bottom: 1rem;
+}
+section.upcoming .left .upcoming-card-top h5{
+    font-family: "Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+section.upcoming .left .upcoming-card-top p{
+    font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 24px;
+margin-bottom: 2rem;
+}
+section.upcoming .left div img{
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+}
+section.upcoming .left .upcoming-timing{
+    margin-bottom: 1rem;
+}
+section.upcoming .left .upcoming-timing p, section.upcoming .left .upcoming-address p{
+    font-size: 1rem;
+    color: var(--black);
+    font-family: "Regular";
+    font-weight: 800;
+    line-height: 24px;
+}
+section.upcoming .left .upcoming-address{
+    margin-bottom: 2rem;
+}
+
+section.upcoming .right{
+    flex: 2;
+}
+section.upcoming .right img{
+    width: 100%;
+    height: 100%;
+    
+}
+section.upcoming .upcoming-bottom{
+    padding-bottom: 7rem;
+}
+
+section.cta .container {
+    background-image: url(Images/grand-cathedral-church.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+    height: 740px;
+    width: 100%;
+    position: relative;
+}
+section.cta .container .cta-content{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 350px;
+    left: 30%;
+    top: 27%;
+    background-color: var(--white);
+    padding: 2rem 1rem;
+}
+section.cta .container .cta-content .right img{
+    width: 187px;
+    height: 140px;
+}
+section.cta .container .cta-content .left h4{
+    font-size: 1.5rem;
+    font-family: "Bold";
+    margin-bottom: 1rem;
+    line-height: 32px;
+}
+section.cta .container .cta-content .left p{
+    font-family: "Regular";
+    color: var(--black);
+    opacity: 0.75;
+    line-height: 24px;
+    margin-bottom: 1rem;
+}
+section.blog-posts .container{
+    padding: 2rem 2rem;
+}
+section.blog-posts .blog-post-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+}
+section.blog-posts .blog-post-wrapper .post-card{
+    width: 100%;
+    background-color: var(--light-orange);
+    padding: 2rem 2rem;
+}
+
+section.blog-posts .blog-post-wrapper .post-card h6{
+    background: linear-gradient(rgba(165, 78, 43, 1),rgba(220, 152, 83, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Regular";
+    font-size: .75rem;
+    margin-bottom: 1rem;
+}
+section.blog-posts .blog-post-wrapper .post-card h5{
+    font-family: "Bold";
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+margin-bottom: 1rem;
+}
+section.blog-posts .blog-post-wrapper .post-card h4{
+    font-family: "Regular";
+}
+section.blog-posts .blog-post-wrapper .post-card p{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 2rem;
+    font-weight: "Bold";
+}
+section.blog-posts .blog-post-wrapper .post-card p:nth-child(2){
+    margin-bottom: 1rem;
+}
+
+footer .container{
+    display: grid;
+    grid-template-columns:  2fr 1fr 1fr 2fr;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 3rem 3rem;
+}
+
+footer .container .box-4 .input-wrap{
+    /* padding: 0.3rem; */
+    border-radius: 4px;
+    background-color: var(--black);
+    border: 1px solid var(--primary);
+}
+footer .container .box-1 h1{
+    color: var(--primary);
+    font-family: "Regular";
+    margin-bottom: .5rem;
+}
+footer .container .box-1 p{
+    margin-bottom: 1rem;
+    font-family: "Bold";
+    font-size: .75rem;
+}
+footer .container .box-1 #copyright{
+    margin-bottom: 2rem;
+}
+footer .container .box-2 h3{
+    font-family: "Bold";
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+footer .container .box-2 li{
+    list-style-type: none;
+    margin-bottom: 1rem;
+    font-family: "Bold";
+    font-size: .75rem;
+}
+footer .container .box-3 h3{
+    font-family: "Bold";
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.social-icons-links img{
+    margin-right: 1rem;
+}
+
+footer .container .box-4 .input-wrap input{
+    width: 100%;
+    border: none;
+    padding: 0 1rem;
+    font-size: 1rem;
+    background-color: var(--black);
+}
+footer .container .box-4 .input-wrap .btn{
+    border-radius: 3px;
+}
+footer .container .box-4 h2{
+    font-family: "Regular";
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+                                /*-------------------- media queries ------------------*/
+
+@media (max-width:1024px){
+    header #main-nav{
+    display: none;        
+    }
+    .hamberger{
+        display: none;
+    }
+    .topbar .container .left .links a{
+        margin-right: 1rem;
+    }
+    .topbar .container .right button{
+        margin-left: 18rem;
+    }
+    section.welcome .welcome-center{
+        width: 36%;
+        padding-top: 2rem;
+    }
+}
+
+
+
+@media (max-width:992px){
+    .topbar .container .right button {
+    margin-left: auto;
+    }
+    .topbar .container .right .btn{
+        padding: 0.6rem 2rem;
+    }
+    .topbar .container .right {
+        width: 42%;
+    }
+    .topbar .container .left .logo{
+        margin-right: 2rem;
+    }
+    .topbar .container .left .links a{
+        margin-right: 0.5rem;
+    }
+    section.welcome .welcome-center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        padding-bottom: 2rem;
+    }
+    section.upcoming .upcoming-bottom{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    section.cta .container{
+        height: 338px;
+    }
+    section.cta .container .cta-content {
+        left: 17%;
+        top: 13%;
+        width: 500px;
+        height: auto
+    }
+    section.blog-posts .blog-post-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 1rem;
+    }
+    footer .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer .container .btn{
+        padding: 0.5rem 2rem;
+        border-radius: 4px;
+
+    }
+}
+
+@media (max-width:768px){
+    .topbar .container .right button {
+        margin-left: 5rem;
+    }
+    .topbar .container .left .links a{
+        display: none;
+    }
+    .hamberger{
+        display: block;
+    }
+    .topbar .container .right .btn{
+        display: none;
+    }
+    section.what-do .card-wrapper .card {
+        padding: 1rem 1rem;
+    }
+    section.benefit-of-church .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.cta .container .cta-content{
+        left: 18%;
+        top: 17%;
+        width: 400px;
+        height: 225px;
+    }
+    section.cta .container .cta-content .left h4 {
+            font-size: .85rem;
+            line-height: 16px;
+    }
+    section.cta .container .cta-content .left p{
+        line-height: 18px;
+    }
+    footer .container{
+        grid-template-columns: repeat(1, 1fr);
+        grid-row-gap: 1rem;
+    
+    }
+}
+
+@media (max-width:576px){
+    .section-heading + h1{
+        font-size: 2rem;
+    }
+    header.hero .container h1{
+        font-size: 3rem;
+    }
+    section.welcome p{
+        padding: 0 2rem;
+    }
+    section.cta .container .cta-content{
+        left: 18%;
+    top: 25%;
+    width: 282px;
+    height: 169px;
+    }
+    section.cta .container .cta-content .right img{
+        display: none;
+    }
+    section.blog-posts .blog-post-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.welcome .welcome-center{
+        width: 88%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
