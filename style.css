@@ -584,7 +584,7 @@ footer .container .box-4 h2{
         margin-right: 0.5rem;
     }
     section.welcome .welcome-center{
-        /* width: 38%; */
+        width: 100%;
     }
     section.upcoming .upcoming-bottom{
         flex-wrap: wrap;
