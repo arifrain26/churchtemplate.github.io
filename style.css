@@ -684,6 +684,10 @@ footer .container .box-4 h2{
     section.welcome .welcome-center{
         width: 88%;
     }
+    section.what-do .card-wrapper{
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 1rem;
+    }
 }
 
 
