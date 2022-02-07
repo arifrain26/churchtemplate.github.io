@@ -586,6 +586,7 @@ footer .container .box-4 h2{
     section.welcome .welcome-center{
         width: 100%;
         height:auto;
+        padding:0 2rem;
     }
     section.upcoming .upcoming-bottom{
         flex-wrap: wrap;
